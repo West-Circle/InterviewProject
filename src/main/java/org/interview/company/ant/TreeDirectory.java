@@ -1,12 +1,11 @@
-package org.interview.common.code;
+package org.interview.company.ant;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Category {
-
+class Category {
     private String id;
 
     private String pid;
@@ -43,12 +42,18 @@ public class Category {
         this.name = name;
     }
 
+}
+
+public class TreeDirectory {
+
+
+
     private static void printRecursive(Map<String, List<Category>> map, String pid, Integer indent) {
         List<Category> list = map.get(pid);
-        if(null == list) {
+        if (null == list) {
             return;
         }
-        for(Category category : list) {
+        for (Category category : list) {
             System.out.println(indentString(indent) + category.getId() + " " + category.getName());
             printRecursive(map, category.getId(), indent + 1);
         }
@@ -56,9 +61,9 @@ public class Category {
 
     private static void printHierarchy(List<Category> categoryList) {
         Map<String, List<Category>> map = new HashMap<>();
-        for(Category category : categoryList) {
+        for (Category category : categoryList) {
             List<Category> list = map.get(category.getPid());
-            if(null == list) {
+            if (null == list) {
                 list = new ArrayList<>();
             }
             list.add(category);
@@ -69,7 +74,7 @@ public class Category {
 
     private static String indentString(Integer indent) {
         StringBuilder sb = new StringBuilder();
-        for(int i = 0 ; i < indent * 3 ; i++) {
+        for (int i = 0; i < indent * 3; i++) {
             sb.append(" ");
         }
         return sb.toString();

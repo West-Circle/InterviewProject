@@ -1,4 +1,4 @@
-package org.interview.common.code;
+package org.interview.common.code.sort;
 
 /**
  * Package: com.testing01
