@@ -1,3 +1,4 @@
+中心扩散法
 ```java
 class Solution {
     public String longestPalindrome(String s) {
