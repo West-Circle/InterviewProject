@@ -22,7 +22,7 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {64, 34, 39, 10, 68, 33, 11, 90};
+        int[] arr = {64, 34, 39, 10, 68, 33, 11, 2};
         System.out.print("原数组: ");
         for(int num : arr){
             System.out.print(num + " ");
